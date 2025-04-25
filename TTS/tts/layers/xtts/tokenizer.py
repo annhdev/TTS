@@ -229,6 +229,12 @@ _abbreviations = {
             # Korean doesn't typically use abbreviations in the same way as Latin-based scripts.
         ]
     ],
+    "vi": [
+        (re.compile("\\b%s\\." % x[0], re.IGNORECASE), x[1])
+        for x in [
+            # Vietnamese doesn't typically use abbreviations in the same way as Latin-based scripts.
+        ]
+    ],
 }
 
 
@@ -423,6 +429,18 @@ _symbols_multilingual = {
             ("$", " 달러 "),
             ("£", " 파운드 "),
             ("°", " 도 "),
+        ]
+    ],
+    "vi": [
+        (re.compile(r"%s" % re.escape(x[0]), re.IGNORECASE), x[1])
+        for x in [
+            ("&", " và "),
+            ("@", " đến "),
+            ("%", " phần trăm "),
+            ("#", " thăng "),
+            ("$", " dollar "),
+            ("£", " pound "),
+            ("°", " độ "),
         ]
     ],
 }
