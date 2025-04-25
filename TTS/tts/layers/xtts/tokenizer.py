@@ -628,7 +628,7 @@ class VoiceBpeTokenizer:
             )
 
     def preprocess_text(self, txt, lang):
-        if lang in {"ar", "cs", "de", "en", "es", "fr", "hu", "it", "nl", "pl", "pt", "ru", "tr", "zh", "ko"}:
+        if lang in {"ar", "cs", "de", "en", "es", "fr", "hu", "it", "nl", "pl", "pt", "ru", "tr", "zh", "ko", "vi"}:
             txt = multilingual_cleaners(txt, lang)
             if lang == "zh":
                 txt = chinese_transliterate(txt)
